@@ -6,4 +6,5 @@ As the author says, the tutorials must be done in order, so even when I'm famili
 
 ## Contents
 
-**Project 1: Storm Viewer**
+**Project 1: Storm Viewer** a simple project made to get used to the basics of Xcode and iOS Development.
+**Project 2: Guess the Flag**

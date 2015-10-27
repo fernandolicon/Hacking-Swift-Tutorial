@@ -20,16 +20,25 @@
                                 <rect key="frame" x="200" y="142" width="200" height="100"/>
                                 <animations/>
                                 <state key="normal" image="spain"/>
+                                <connections>
+                                    <action selector="flagSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVd-9l-vON"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-o9-A3H" userLabel="button2">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-o9-A3H" userLabel="button2">
                                 <rect key="frame" x="200" y="250" width="200" height="100"/>
                                 <animations/>
                                 <state key="normal" image="spain"/>
+                                <connections>
+                                    <action selector="flagSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LdT-af-puP"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0u-oU-FHl" userLabel="button3">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0u-oU-FHl" userLabel="button3">
                                 <rect key="frame" x="200" y="358" width="200" height="100"/>
                                 <animations/>
                                 <state key="normal" image="spain"/>
+                                <connections>
+                                    <action selector="flagSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cI4-fc-e3h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

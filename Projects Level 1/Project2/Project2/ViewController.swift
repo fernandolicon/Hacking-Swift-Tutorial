@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     //Game vars
     var countries = [String]()
     var score = 0
+    var correctAnswer = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +26,17 @@ class ViewController: UIViewController {
         
         setUpLayout()
         createCountriesArray()
-        countries = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries) as! [String]
-        askQuestion()
+        setGame()
     }
     
     //Setup methods
+    func setGame(){
+        countries = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries) as! [String]
+        correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
+        title = countries[correctAnswer].uppercaseString
+        askQuestion()
+    }
+    
     func setUpLayout(){
         button1.layer.borderWidth = 1.0
         button1.layer.borderColor = UIColor.lightGrayColor().CGColor
@@ -66,6 +73,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func flagSelected(sender: AnyObject) {
+        var userResult : String
+        if sender.tag == correctAnswer {
+            userResult = "Correct"
+            score++
+        }else {
+            userResult = "Wrong"
+            score--
+        }
+        
+        let alertController = UIAlertController(title: userResult, message: "Your score is \(score).", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "Continue", style: .Default) { (UIAlertAction) -> Void in
+            self.setGame()
+        }
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
 
 }
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XxM-V5-9PX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -40,6 +41,13 @@
                                     <action selector="flagSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cI4-fc-e3h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2W-OQ-Ke5">
+                                <rect key="frame" x="20" y="72" width="64" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -47,6 +55,8 @@
                             <constraint firstItem="d0u-oU-FHl" firstAttribute="top" secondItem="NQd-o9-A3H" secondAttribute="bottom" constant="8" id="2vO-hf-xn5"/>
                             <constraint firstItem="d0u-oU-FHl" firstAttribute="centerX" secondItem="NQd-o9-A3H" secondAttribute="centerX" id="8Ys-c3-D9w"/>
                             <constraint firstItem="Sqc-LA-xhS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Li4-xn-RA1"/>
+                            <constraint firstItem="v2W-OQ-Ke5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O2H-he-fmF"/>
+                            <constraint firstItem="v2W-OQ-Ke5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="P29-WH-hkd"/>
                             <constraint firstItem="NQd-o9-A3H" firstAttribute="top" secondItem="Sqc-LA-xhS" secondAttribute="bottom" constant="8" id="bcf-y1-qxl"/>
                             <constraint firstItem="NQd-o9-A3H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iqg-cv-cR3"/>
                             <constraint firstItem="Sqc-LA-xhS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nOn-th-0bu"/>
@@ -63,6 +73,7 @@
                         <outlet property="button1" destination="Sqc-LA-xhS" id="eWx-j7-Avu"/>
                         <outlet property="button2" destination="NQd-o9-A3H" id="uBX-XS-VMV"/>
                         <outlet property="button3" destination="d0u-oU-FHl" id="LQ5-Gn-gYs"/>
+                        <outlet property="scoreLabel" destination="v2W-OQ-Ke5" id="3h7-qq-KUh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

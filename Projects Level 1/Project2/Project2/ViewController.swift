@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     //Game vars
     var countries = [String]()
@@ -83,12 +84,18 @@ class ViewController: UIViewController {
             score--
         }
         
+        //This was part of the original tutorial
+        /*
         let alertController = UIAlertController(title: userResult, message: "Your score is \(score).", preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "Continue", style: .Default) { (UIAlertAction) -> Void in
             self.setGame()
         }
         alertController.addAction(defaultAction)
         presentViewController(alertController, animated: true, completion: nil)
+        */
+        
+        scoreLabel.text = "Score: \(score)"
+        setGame()
     }
 
 }

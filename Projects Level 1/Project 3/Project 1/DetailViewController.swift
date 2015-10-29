@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class DetailViewController: UIViewController {
     
@@ -54,8 +55,20 @@ class DetailViewController: UIViewController {
     }
     
     func shareTapped(){
+        //Share to default media
         let viewController = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
         presentViewController(viewController, animated: true, completion: nil)
+        
+        /*
+        //Share to Facebook
+        //let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        //Share to Twitter
+        let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        vc.setInitialText("Look at this great picture!")
+        vc.addImage(detailImageView.image!)
+        vc.addURL(NSURL(string: "http://www.photolib.noaa.gov/nssl"))
+        presentViewController(vc, animated: true, completion: nil)
+        */
     }
     
     

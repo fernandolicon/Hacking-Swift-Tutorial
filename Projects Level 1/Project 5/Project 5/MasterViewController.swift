@@ -19,6 +19,8 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let barButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "promptForAnswer")
+        navigationItem.rightBarButtonItem = barButton
         
         if let startWordsPath = NSBundle.mainBundle().pathForResource("start", ofType: "txt"){
             if let startWords = try? String(contentsOfFile: startWordsPath, usedEncoding: nil){
@@ -48,6 +50,63 @@ class MasterViewController: UITableViewController {
         title = allWords[0]
         objects.removeAll(keepCapacity: true)
         tableView.reloadData()
+    }
+    
+    func promptForAnswer(){
+        let alertController = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .Alert)
+        alertController.addTextFieldWithConfigurationHandler(nil)
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .Default) {[unowned self, alertController] (action: UIAlertAction!) in
+            let answer = alertController.textFields![0]
+            self.submitAnswer(answer.text!)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(submitAction)
+        alertController.addAction(cancelAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func submitAnswer(answer: String){
+        let lowerAnswer = answer.lowercaseString
+        
+        if wordIsPossible(lowerAnswer){
+            if wordIsOriginal(lowerAnswer){
+                if wordIsReal(lowerAnswer){
+                    objects.insert(answer, atIndex: 0)
+                    
+                    let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+                    tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                }
+            }
+        }
+    }
+    
+    func wordIsPossible(word: String) -> Bool{
+        var tempWord = title!.lowercaseString
+        
+        for letter in word.characters {
+            if let pos = tempWord.rangeOfString(String(letter)) {
+                tempWord.removeAtIndex(pos.startIndex)
+            } else {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    func wordIsOriginal(word: String) -> Bool{
+        return !objects.contains(word)
+    }
+    
+    func wordIsReal(word: String) -> Bool{
+        let checker = UITextChecker()
+        let range = NSMakeRange(0, word.characters.count)
+        let misspelledRange = checker.rangeOfMisspelledWordInString(word, range: range, startingAt: 0, wrap: false, language: "en")
+        
+        return misspelledRange.location == NSNotFound
     }
 
     // MARK: - Table View

@@ -13,6 +13,7 @@
 		A810E6201BE98BD700D378C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A810E61E1BE98BD700D378C7 /* Main.storyboard */; };
 		A810E6221BE98BD700D378C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A810E6211BE98BD700D378C7 /* Assets.xcassets */; };
 		A810E6251BE98BD700D378C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A810E6231BE98BD700D378C7 /* LaunchScreen.storyboard */; };
+		A8750FCC1BED799D00BC70A0 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = A8750FCB1BED799D00BC70A0 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A810E6211BE98BD700D378C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A810E6241BE98BD700D378C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A810E6261BE98BD700D378C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8750FCB1BED799D00BC70A0 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = start.txt; path = Content/start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A810E6181BE98BD700D378C7 /* AppDelegate.swift */,
 				A810E61A1BE98BD700D378C7 /* MasterViewController.swift */,
 				A810E61C1BE98BD700D378C7 /* DetailViewController.swift */,
+				A8750FCB1BED799D00BC70A0 /* start.txt */,
 				A810E61E1BE98BD700D378C7 /* Main.storyboard */,
 				A810E6211BE98BD700D378C7 /* Assets.xcassets */,
 				A810E6231BE98BD700D378C7 /* LaunchScreen.storyboard */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A810E6251BE98BD700D378C7 /* LaunchScreen.storyboard in Resources */,
+				A8750FCC1BED799D00BC70A0 /* start.txt in Resources */,
 				A810E6221BE98BD700D378C7 /* Assets.xcassets in Resources */,
 				A810E6201BE98BD700D378C7 /* Main.storyboard in Resources */,
 			);
@@ -288,6 +292,7 @@
 				A810E62B1BE98BD700D378C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

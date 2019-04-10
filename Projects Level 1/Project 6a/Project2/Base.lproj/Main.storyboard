@@ -21,24 +21,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqc-LA-xhS" userLabel="button1">
-                                <rect key="frame" x="87.5" y="175.5" width="200" height="100"/>
+                                <rect key="frame" x="87.5" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Sqc-LA-xhS" secondAttribute="height" multiplier="2:1" id="wJe-WQ-UkX"/>
+                                </constraints>
                                 <state key="normal" image="spain"/>
                                 <connections>
-                                    <action selector="flagSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVd-9l-vON"/>
+                                    <action selector="flagSelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZC-8e-qsP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-o9-A3H" userLabel="button2">
-                                <rect key="frame" x="87.5" y="283.5" width="200" height="100"/>
+                                <rect key="frame" x="87.5" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NQd-o9-A3H" secondAttribute="height" multiplier="2:1" id="g1f-Al-ECj"/>
+                                </constraints>
                                 <state key="normal" image="spain"/>
                                 <connections>
-                                    <action selector="flagSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LdT-af-puP"/>
+                                    <action selector="flagSelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IyV-HF-dEQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0u-oU-FHl" userLabel="button3">
-                                <rect key="frame" x="87.5" y="391.5" width="200" height="100"/>
+                                <rect key="frame" x="87.5" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d0u-oU-FHl" secondAttribute="height" multiplier="2:1" id="kBY-Dh-WU5"/>
+                                </constraints>
                                 <state key="normal" image="spain"/>
                                 <connections>
-                                    <action selector="flagSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cI4-fc-e3h"/>
+                                    <action selector="flagSelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pju-05-f4E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2W-OQ-Ke5">
@@ -50,13 +59,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="d0u-oU-FHl" firstAttribute="top" secondItem="NQd-o9-A3H" secondAttribute="bottom" constant="8" id="2vO-hf-xn5"/>
+                            <constraint firstItem="d0u-oU-FHl" firstAttribute="top" secondItem="NQd-o9-A3H" secondAttribute="bottom" constant="30" id="2vO-hf-xn5"/>
+                            <constraint firstItem="Sqc-LA-xhS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="6Wm-jr-TyT"/>
                             <constraint firstItem="d0u-oU-FHl" firstAttribute="centerX" secondItem="NQd-o9-A3H" secondAttribute="centerX" id="8Ys-c3-D9w"/>
+                            <constraint firstItem="NQd-o9-A3H" firstAttribute="height" secondItem="Sqc-LA-xhS" secondAttribute="height" id="AWm-tE-KPJ"/>
                             <constraint firstItem="Sqc-LA-xhS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Li4-xn-RA1"/>
                             <constraint firstItem="v2W-OQ-Ke5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O2H-he-fmF"/>
                             <constraint firstItem="v2W-OQ-Ke5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="P29-WH-hkd"/>
-                            <constraint firstItem="NQd-o9-A3H" firstAttribute="top" secondItem="Sqc-LA-xhS" secondAttribute="bottom" constant="8" id="bcf-y1-qxl"/>
-                            <constraint firstItem="NQd-o9-A3H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iqg-cv-cR3"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="d0u-oU-FHl" secondAttribute="bottom" constant="20" id="aWS-in-hwT"/>
+                            <constraint firstItem="NQd-o9-A3H" firstAttribute="top" secondItem="Sqc-LA-xhS" secondAttribute="bottom" constant="30" id="bcf-y1-qxl"/>
+                            <constraint firstItem="d0u-oU-FHl" firstAttribute="height" secondItem="NQd-o9-A3H" secondAttribute="height" id="mFP-Mt-7eb"/>
                             <constraint firstItem="Sqc-LA-xhS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nOn-th-0bu"/>
                             <constraint firstItem="NQd-o9-A3H" firstAttribute="centerX" secondItem="Sqc-LA-xhS" secondAttribute="centerX" id="tlQ-Zs-Inb"/>
                         </constraints>
